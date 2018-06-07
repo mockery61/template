@@ -1,0 +1,102 @@
+ /* imports */    
+@import "./imports/_mixins.less";
+@import "./imports/_grid.less";
+@import "./imports/_variables.less";
+@import "./imports/_fonts.less";
+
+
+html,body {
+  font-family: 'ProximaNova', 'Roboto', sans-serif;
+
+	}
+
+.products {	
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+
+
+	&__item {
+		width: 260px;
+		height: 185px;	
+	}
+}
+
+.product {
+	border: 1px solid green;
+	border-radius: 10px;
+	cursor: pointer;
+	transition: all 0.6s ease;
+
+	
+	&:first-child {
+		&:hover{
+			transform:rotateZ(1deg) rotateX(1deg) scale(1.05);
+			border-radius: 10px;
+		}
+	}
+	&:nth-child(2) {
+		&:hover{
+		transform: scale(1.05);
+		}
+	}	
+
+	&:nth-child(3) {
+		&:hover{
+		transform: scale(1.05);
+		}
+	}
+
+	&:last-child {
+		&:hover{
+  	  transform:rotateZ(-1deg) rotateX(-1deg) scale(1.05);
+			border-radius: 10px;
+		}
+	}
+
+	&__title {
+		margin-bottom:15px;
+		position: relative;
+		padding-left: 50px;
+		line-height: 25px;
+		font-size: 25px;
+		color: #646464;
+		display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flex;
+		display: -o-flex;
+		
+		
+		&:hover{
+			color:#2bc94e;
+		}
+	}
+
+		&:before {
+			content: " ";
+			width: 40px;
+			height: 40px;
+			margin-bottom: 20px;
+			border-radius: 5px;
+			background-color: #2bc94e;
+			display: flex;
+			position: absolute;
+			left: 0;
+			margin-left: 25px;
+
+		}
+	}
+
+	&__text {
+		color: #646464;
+		font-family: "Avenir Next";
+		font-size: 14px;
+		font-weight: 400;
+		line-height: 28px;
+		padding: 5px 30px;
+		display: flex;
+
+	}
+}
+
