@@ -1,102 +1,83 @@
  /* imports */    
-@import "./imports/_mixins.less";
 @import "./imports/_grid.less";
 @import "./imports/_variables.less";
 @import "./imports/_fonts.less";
 
-
-html,body {
-  font-family: 'ProximaNova', 'Roboto', sans-serif;
-
-	}
-
-.products {	
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	justify-content: space-between;
-
-
-	&__item {
-		width: 260px;
-		height: 185px;	
-	}
+body {
+	color: #696969;
 }
 
-.product {
-	border: 1px solid green;
-	border-radius: 10px;
-	cursor: pointer;
-	transition: all 0.6s ease;
+.container {
+	width: 100%;
+	height: 100%;
+	background-color: #696969;
 
+}
+
+.header {
+		font-size: 20px;
+		font-weight: 600;
+		color: white;
+		text-align: center;
+		padding: 30px;
+		margin: 10px;
+	}
 	
-	&:first-child {
-		&:hover{
-			transform:rotateZ(1deg) rotateX(1deg) scale(1.05);
-			border-radius: 10px;
-		}
-	}
-	&:nth-child(2) {
-		&:hover{
-		transform: scale(1.05);
-		}
-	}	
 
-	&:nth-child(3) {
-		&:hover{
-		transform: scale(1.05);
-		}
-	}
+.news {
 
-	&:last-child {
-		&:hover{
-  	  transform:rotateZ(-1deg) rotateX(-1deg) scale(1.05);
-			border-radius: 10px;
+	display: flex;
+
+	&__item {
+		width: 500px;
+		height: 400px;
+		border: 1px solid white;
+		background-color: white;
+		border-radius: 10px;
+		box-shadow: 0px 5px 10px white;
+		display: inline-block;
+		margin: 30px;
+		padding: 20px 30px 20px 30px;
+		line-height: 25px;
+
+		&:first-child {
+			margin-left: 50px;
+			margin-right: 10px;
 		}
+
+		&:last-child {
+			margin-left: 10px;
+			margin-right: 50px;
+		}	
 	}
 
 	&__title {
-		margin-bottom:15px;
-		position: relative;
-		padding-left: 50px;
-		line-height: 25px;
-		font-size: 25px;
-		color: #646464;
-		display: -webkit-flex;
-		display: -moz-flex;
-		display: -ms-flex;
-		display: -o-flex;
-		
-		
-		&:hover{
-			color:#2bc94e;
+		line-height: 35px;
+		width: 300px;
+
+		&:hover {
+			color: #32CD32;
 		}
-	}
-
-		&:before {
-			content: " ";
-			width: 40px;
-			height: 40px;
-			margin-bottom: 20px;
-			border-radius: 5px;
-			background-color: #2bc94e;
-			display: flex;
-			position: absolute;
-			left: 0;
-			margin-left: 25px;
-
-		}
-	}
-
-	&__text {
-		color: #646464;
-		font-family: "Avenir Next";
-		font-size: 14px;
-		font-weight: 400;
-		line-height: 28px;
-		padding: 5px 30px;
-		display: flex;
-
 	}
 }
 
+a {
+	color: #32CD32;
+	
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+img {
+	width: 60px;
+	height: 60px;
+	border-radius: 50%;
+	display: flex;
+}
+
+figure {
+	width: 60px;
+	height: 60px;
+	display: flex;
+}
